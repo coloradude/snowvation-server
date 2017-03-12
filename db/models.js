@@ -13,6 +13,7 @@ const equiptmentSchema = mongoose.Schema({
   condition: Number,
   size: Number,
   width: Number,
+  brand: String
   _equiptmentGroup: {type: ObjectId, ref: 'EquiptmentGroup'}
 })
 
