@@ -10,10 +10,11 @@ mongoose.connect(process.env.MONGO_URL)
 // })
 
 const equiptmentSchema = mongoose.Schema({
-  condition: Number,
-  size: Number,
-  width: Number,
-  brand: String
+  brand: String,
+  model: String,
+  price: Number,
+  description: String,
+  imageUrl: String
 })
 
 // const customerSchema = mongoose.Schema({

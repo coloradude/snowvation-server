@@ -3,22 +3,22 @@ const router = express.Router()
 
 const models = require('../db/models.js')
 
-const EquiptmentGroup = models.EquiptmentGroup
+// const EquiptmentGroup = models.EquiptmentGroup
 const Equiptment = models.Equiptment
-const Customer = models.Customer
-const Rental = models.Rental
+// const Customer = models.Customer
+// const Rental = models.Rental
 
 /* GET home page. */
-router.get('/rentals', (req, res, next) => {
+router.get('/equiptment', (req, res, next) => {
   Equiptment.find({}).then( equiptment => res.send(equiptment))
+})
+
+router.post('/equiptment', (req, res, next) => {
+  new Equiptment(req.body).save().then(() => res.status(200).send())
 })
 
 router.get('/equiptment/:_id', (req, res, next) => {
   Equiptment.find({_id: req._id}).then( equiptment => res.send(equiptment))
-})
-
-router.post('/equiptment', (req, res, next) => {
-  Equiptment.save(req.body).then(() => res.status(200).send())
 })
 
 router.delete('/equiptment/:_id', (req, res, next) => {
