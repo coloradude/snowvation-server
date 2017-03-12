@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
-const models = require('./db/models.js')
+const models = require('../db/models.js')
 
 const EquiptmentGroup = models.EquiptmentGroup
 const Equiptment = models.Equiptment
