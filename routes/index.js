@@ -18,15 +18,15 @@ router.post('/equiptment', (req, res, next) => {
 })
 
 router.get('/equiptment/:_id', (req, res, next) => {
-  Equiptment.find({_id: req._id}).then( equiptment => res.send(equiptment))
+  Equiptment.findById(req.params._id).then( equiptment => res.send(equiptment))
 })
 
 router.delete('/equiptment/:_id', (req, res, next) => {
-  Equiptment.delete({_id: req.body._id}).then(() => res.status(200).send())
+  Equiptment.findById(req.params._id).remove().then(() => res.status(200).send())
 })
 
 router.patch('/equiptment/:_id', (req, res, next) => {
-
+  Equiptment.updateOne({_id: req.params._id}, req.body).then(() => res.status(200).send())
 })
 
 module.exports = router
