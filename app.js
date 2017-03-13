@@ -21,7 +21,7 @@ app.set('view engine', 'jade');
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 
 app.use(cors({
-  allowedOrigins: 'https://snowvation-website.firebase.com'
+  allowedOrigins: ['firebase.com', 'snowvation-website.firebaseapp.com']
 }))
 
 app.use(logger('dev'));
