@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const ObjectId = mongoose.Schema.Types.ObjectId
 
-mongoose.connect(process.env.MONGO_URL)
+mongoose.connect(process.env.MONGODB_URI)
 
 // const equipmentGroupSchema = mongoose.Schema({
 //   type: String,
